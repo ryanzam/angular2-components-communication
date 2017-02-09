@@ -1,0 +1,9 @@
+.comp {
+  border: 2px solid black;
+  margin-bottom: 50px;
+  padding: 20px;
+}
+
+.parent {
+  background-color: darkcyan;
+}

@@ -1,0 +1,17 @@
+<h1>{{ title }}</h1>
+
+
+<div class="comp parent">
+
+  <h2>This is Parent Component</h2>
+
+  <h3>Value from Child : {{childData}}</h3>
+
+  <input type="text" #parentText (keyup)="0">
+
+  <app-child-component (childEvt)="childData=$event" [parentData] = 'parentText.value'></app-child-component>
+
+</div>
+
+
+
