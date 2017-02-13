@@ -1,19 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Input, Output} from '@angular/core';
 import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-child-component',
   templateUrl: './child-component.component.html',
-  styleUrls: ['./child-component.component.css'],
-  inputs:['parentData'],
-  outputs: ['childEvt']
+  styleUrls: ['./child-component.component.css']
 
 })
 export class ChildComponentComponent implements OnInit {
 
-  public parentData:string;
+  @Input() parentData:string;
 
-  childEvt = new EventEmitter<string>();
+  @Output() childEvt = new EventEmitter<string>();
 
   constructor() {
 
